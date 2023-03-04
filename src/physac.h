@@ -235,7 +235,7 @@ PHYSACDEF void ClosePhysics(void);                                              
 #if defined(PHYSAC_IMPLEMENTATION)
 
 #if !defined(PHYSAC_NO_THREADS)
-    #include <pthread.h>            // Required for: pthread_t, pthread_create()
+    #include <thread>            // Required for: pthread_t, pthread_create()
 #endif
 
 #if defined(PHYSAC_DEBUG)
@@ -249,8 +249,6 @@ PHYSACDEF void ClosePhysics(void);                                              
 #if !defined(PHYSAC_STANDALONE)
     #include "raymath.h"            // Required for: Vector2Add(), Vector2Subtract()
 #endif
-
-#include <thread>
 
 // Time management functionality
 #include <time.h>                   // Required for: time(), clock_gettime()
